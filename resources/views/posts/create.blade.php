@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<x-app-layout>
+    <x-slot name='header'>
     <head>
         <meta charset="utf-8">
         <title>Blog</title>
@@ -7,6 +9,7 @@
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
+    </x-slot>
     <body>
         <h1>Blog Name</h1>
         <form action='/posts' method='POST'>
@@ -35,4 +38,5 @@
         <a href='/'>戻る</a>
         </div>
     </body>
+    </x-app-layout>
 </html>
